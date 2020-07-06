@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button, Image, Divider } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 const User = ({ user: { login, avatar_url, html_url } }) => {
   return (
     <>
@@ -10,9 +11,12 @@ const User = ({ user: { login, avatar_url, html_url } }) => {
           <Card.Header>{login}</Card.Header>
         </Card.Content>
         <Card.Content extra>
-          <Button basic color='green'>
-            More
-          </Button>
+          {' '}
+          <Link to={`/user/${login}`}>
+            <Button basic color='green'>
+              More
+            </Button>
+          </Link>
         </Card.Content>
       </Card>
     </>

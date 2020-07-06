@@ -1,9 +1,7 @@
 import React from 'react';
 import { Segment, Card, Divider, Dimmer, Loader } from 'semantic-ui-react';
 import User from './User';
-function Users({ loading, users }) {
-  console.log(users);
-
+function Users({ loading, users, user, getUser }) {
   return loading ? (
     <Segment basic>
       <Divider hidden />
