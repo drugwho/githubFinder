@@ -26,6 +26,7 @@ const SingleUser = ({ getUser, getRepos, repos, user, match, loading }) => {
     location,
     bio,
     blog,
+    login,
     company,
     followers,
     following,
@@ -43,7 +44,11 @@ const SingleUser = ({ getUser, getRepos, repos, user, match, loading }) => {
     </Segment>
   ) : (
     <Container>
-      <Header as='h2'>{name}'s profile</Header>
+      {name ? (
+        <Header as='h2'>{name}'s profile</Header>
+      ) : (
+        <Header as='h2'>{login}'s profile</Header>
+      )}
       <Segment padded='very'>
         <Grid centered stackable>
           <Grid.Column width={4}>
