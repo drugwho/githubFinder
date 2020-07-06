@@ -9,7 +9,7 @@ const About = () => {
         <span role='img' aria-label='heart'>
           ❤️
         </span>{' '}
-        &nbsp; by Raghu
+        by Raghu
       </Header>
       <Divider hidden></Divider>
       <Header as='h3'>v1.0.0</Header>
